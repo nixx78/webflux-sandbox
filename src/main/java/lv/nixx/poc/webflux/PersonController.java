@@ -24,7 +24,7 @@ public class PersonController {
 
     @GetMapping("/{id}")
     public Mono<PersonDTO> getUserById(@PathVariable Long id) {
-        return Mono.just(personService.getById(id));
+        return personService.getById(id);
     }
 
 }
